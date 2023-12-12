@@ -1,44 +1,41 @@
 import React from 'react';
-import style from './Header.module.scss';
+import { BrowserView, isMobile } from 'react-device-detect';
+import './Header.scss';
 import logo from '../../assets/images/logo.png';
-import Button from "../uikit/Button/Button";
-import {useTranslation} from "react-i18next";
-import {BrowserView, isMobile} from "react-device-detect";
 
-const Header = () => {
-  const {t} = useTranslation();
-
-  return <header className={`${style.header} wrapper`}>
-    <a href="#">
-      <img src={logo} alt="lgu casino" className={style.logo}/>
-    </a>
+function Header() {
+  const map = [
     {
-      !isMobile
-        ? (
-          <div className="d-flex">
-            <div className={style.registerWrapper}>
-              <Button
-                hasCorner
-                className={style.register}
-                uppercase={false}
-                width={211}
-                isHovered={false}
-                component="div"
-              >{t('header.registration')}</Button>
-            </div>
-            <Button color="red" width={211} isHoveredBackground={false}>{t('header.signUp')}</Button>
-          </div>
-        )
-        : (
-          <Button
-            color="green"
-            width={135}
-            disableAnimation
-          >{t('common.playNow')}</Button>
-        )
-    }
+      key: 'Занятия и стоимость',
+      url: '#'
+    },
+    {
+      key: 'Методика и обучение',
+      url: '#'
+    },
+    {
+      key: 'Отзывы',
+      url: '#'
+    },
+    {
+      key: 'Обо мне',
+      url: '#'
+    },
+    {
+      key: 'FAQ',
+      url: '#'
+    },
+  ];
 
-  </header>
+  return (
+    <header className="wrapper d-flex flex-row justify-content-between align-items-center">
+      <a href="#">
+        <img height={39} src={logo} alt="lgu casino" />
+      </a>
+      {map.map(v => <span className={"btn"}>{v.key}</span>)}
+      <button className={"btn btn-primary"}><span>Бесплатное занятие</span></button>
+    </header>
+  );
 }
 
 export default Header;

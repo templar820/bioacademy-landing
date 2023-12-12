@@ -2,11 +2,8 @@
 
 html, body {
   margin: 0;
-  font-family: 'Rowdies', sans-serif;
-  background-color: map_get($common, 'black-2');
-  color: map_get($common, 'white-1');
-  font-size: 16px;
-  font-weight: 400;
+  background-color: map_get($common, 'white-1');
+  color: map_get($common, 'black-1');
 }
 
 .app {
@@ -16,6 +13,7 @@ html, body {
 
 .wrapper {
   margin: 0 12px;
+  max-width: 1440px;
 }
 
 button {
