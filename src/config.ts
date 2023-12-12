@@ -1,0 +1,1 @@
+export const timerTimeLeft = 16028; //time in seconds

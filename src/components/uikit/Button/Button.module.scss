@@ -1,0 +1,106 @@
+@import "../../../styles/colors.module";
+
+.button {
+  height: 40px;
+  border-radius: 30px;
+  padding: 0 20px;
+  border: none;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &.red {
+    background: linear-gradient(180deg, map_get($common, 'red-1') 0%, map_get($common, 'red-2') 100%);
+    color: map_get($common, 'white-2');
+  }
+  &.green {
+    background: linear-gradient(180deg, map_get($common, 'green-1') 0%, map_get($common, 'yellow-1') 100%);
+    color: map_get($common, 'black-3');
+  }
+  &.outlined {
+    background: none;
+    color: map_get($common, 'white-2');
+    position: absolute;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 30px;
+      border: 2px solid transparent;
+      background: linear-gradient(180deg, map_get($common, 'green-1') 0%, map_get($common, 'yellow-1') 100%) border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+    &.red {
+      &:before {
+        background: linear-gradient(180deg, map_get($common, 'red-1') 0%, map_get($common, 'red-2') 100%) border-box;
+      }
+    }
+  }
+
+  &.empty {
+    background: none;
+    color: map_get($common, 'white-2');
+  }
+
+  &.withCorner {
+    &:after {
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 20px;
+      background: white;
+      right: -3px;
+      transform: rotate(45deg);
+      background: linear-gradient(135deg, map_get($common, 'green-1') 0%, map_get($common, 'yellow-1') 100%);
+      color: map_get($common, 'black-3')ж
+    }
+  }
+
+  &.hovered {
+    &.empty:hover {
+      color: map_get($common, 'green-2');
+      text-decoration-line: underline;
+    }
+
+    &:not(.empty):hover {
+      color: map_get($common, 'white-2');
+      border: 2px solid map_get($common, 'violet-3');
+      background: none;
+      &.hoveredBackground {
+        background: map_get($common, 'gray-6');
+      }
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+:global(.mobile) .button {
+  font-size: 14px;
+  line-height: 17px;
+
+  &.animation {
+    animation: 1.5s cubic-bezier(.455,.03,.515,.955) infinite both ripple;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+@keyframes ripple{
+  0%, 85%, 100% {
+    transform: scale(1);
+  }
+  90%, 95% {
+    transform: scale(1.05)
+  }
+}

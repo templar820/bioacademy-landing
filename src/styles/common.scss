@@ -1,0 +1,87 @@
+@import "colors.module";
+
+html, body {
+  margin: 0;
+  font-family: 'Rowdies', sans-serif;
+  background-color: map_get($common, 'black-2');
+  color: map_get($common, 'white-1');
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.app {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  margin: 0 12px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s;
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.mobile {
+  width: 100%;
+  .wrapper {
+    margin: 0 auto;
+    width: 360px;
+    padding: 0 16px;
+  }
+
+  .element-animation {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: transparent;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background: rgba(white, 0.2);
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(white, 0.4);
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-input-placeholder,
+.placeholder {
+  color: rgba(0, 0, 0, 0.2);
+  font-family: inherit;
+}

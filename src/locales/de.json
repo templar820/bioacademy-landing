@@ -1,0 +1,49 @@
+{
+  "common": {
+    "playNow": "Play now"
+  },
+  "header": {
+    "registration": "Quick registration",
+    "signUp": "Sign up"
+  },
+  "topSection": {
+    "welcomeBonus": "Welcome Bonus",
+    "upTo": "225% UP TO €550 \n+ 130 FS",
+    "registerNow": "Register now",
+    "easyDeposit": "easy DEPOSIT in crypto",
+    "successful": "100% successful",
+    "registerAndPlay": "REGISTER AND PLAY",
+    "specialBonuses": "SPECIAL BONUSES FOR VIP PLAYERS",
+    "tournamentStarts": "Tournament starts in:"
+  },
+  "timer": {
+    "day": "Day",
+    "hour": "Hour",
+    "min": "Min",
+    "sec": "Sec"
+  },
+  "gameCardsSection": {
+    "liveCasino": "Live casino",
+    "roulette": "ROULETTE, BACCARAT, BLACKJACK & MORE",
+    "learnMore": "Learn more",
+    "casino": "Casino",
+    "slots": "OVER 3000 SLOTS FOR EVERY TASTE",
+    "tournaments": "TOURNAMENTS",
+    "newTournaments": "NEW TOURNAMENTS\nDON'T MISS THE START",
+    "card1LearnMore": "Genießen Sie Live-Casino-Spiele, die es gibt\nin Echtzeit gestreamt, wo echt\nDealer mischen, handeln und interagieren\nmit Live-Casino-Spielern. Live spielen\nBlackjack, Live-Roulette, Live\nBaccarat und viele mehr, um zu gewinnen\nmit Igucasino! Erleben Sie den Spaß,\nder Nervenkitzel und die Magie der Möglichkeiten.",
+    "card2LearnMore": "Wählen Sie ein beliebiges Spiel aus den größten\nSammlung von über 3000 Slots. Du wirst finden\nalle Arten von Spielen für Ihren Geschmack.\nJetzt spielen und den JACKPOT gewinnen!",
+    "card3LearnMore": "Wie nehme ich an einem Turnier teil?\n1. Suchen Sie das Turnier, das Sie spielen möchten.\n2. Spielen Sie gemäß den Gewinnbedingungen voll aus.\n3. Genieße den Ruhm!\n\nWerde ein erbitterter Kampfspieler. Platzieren Sie Ihre Wetten\nund in der Rangliste aufsteigen. Je mehr Wetten,\ndesto höher die Belohnung.",
+    "registerNow": "Register now"
+  },
+  "hotGamesSection": {
+    "title": "hOt games are waiting for you right now",
+    "chooseGame": "CHOOSE A TOP GAME PLAY\nAND WIN NOW!",
+    "card1Text": "Fire and Lighting",
+    "card2Text": "Chicago Gangsters",
+    "card3Text": "Sahara Night",
+    "card4Text": "Giza Infinity REELS"
+  },
+  "footer": {
+    "copyright": "Copyright © 2023 www.igucasino.com is owned and operated by Dama N.V., a company registered and established under the laws of Curaçao. Dama N.V. is licensed and regulated by Antillephone N.V. (license no. 8048/JAZ2020-013). Dama N.V.’s registration number is 152125 and its registered address is Julianaplein 36, Willemstad, Curaçao. Friolion Limited is a wholly-owned subsidiary of Dama N.V., acting as an Agent on behalf of Dama N.V., registered in Cyprus with registered address Pavlou Nirvana & Aipeias, 4, ALPHA TOWER, Floor 1, Flat 11, 3021, Limassol, Cyprus and registration number HE 419102. All payments with Paysafe are made via Dama N.V. It is the player’s sole responsibility to inquire about the existing laws and regulations of the given jurisdiction for online gambling."
+  }
+}
