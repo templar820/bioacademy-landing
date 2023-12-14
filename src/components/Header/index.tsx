@@ -5,7 +5,7 @@ import logo from '../../assets/images/logo.png';
 import logoInv from '../../assets/images/logo-inversion.png';
 
 interface IHeader {
-  inversion: boolean
+  inversion?: boolean
 }
 
 function Header(props: IHeader) {

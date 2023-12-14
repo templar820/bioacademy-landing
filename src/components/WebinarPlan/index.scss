@@ -1,0 +1,13 @@
+@import "$colors";
+
+
+
+.WebinarPlan{
+  .count{
+    position: absolute;
+    right: 36px;
+    bottom: 10px;
+    -webkit-text-stroke: 1px map_get($common, 'blue-1');
+    color: white;
+  }
+}

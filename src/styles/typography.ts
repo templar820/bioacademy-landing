@@ -23,11 +23,10 @@ const typography: ThemeOptions['typography'] = {
     fontWeight: 700,
     fontSize: getInPx( 40),
   },
-  // h3: {
-  //   fontWeight: 700,
-  //   fontSize: getInPx(isMobile ? 20 : 45),
-  //   lineHeight: getInPx(isMobile ? 20 : 45),
-  // },
+  h3: {
+    fontWeight: 700,
+    fontSize: getInPx( 28),
+  },
   // h4: {
   //   fontWeight: 700,
   //   fontSize: getInPx(30),
@@ -38,7 +37,7 @@ const typography: ThemeOptions['typography'] = {
   },
   // Текст в карточках
   body1: {
-    fontSize: getInPx(18),
+    fontSize: getInPx(16),
     fontWeight: 300,
   },
   body2: {

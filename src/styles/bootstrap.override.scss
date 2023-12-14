@@ -47,4 +47,14 @@ $theme-colors: (
   padding: 14px 20px;
 }
 
+.card-outlined {
+  display: flex;
+  width: 367px;
+  padding: 20px 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+  border: 1px solid #000;
+}
+
 
