@@ -2,3 +2,65 @@
 @import "bootstrap.override";
 @import "reset";
 @import "common";
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-copy {
+  cursor: copy;
+}
+
+.user-select-none {
+  user-select: none;
+}
+
+.pointer-event-none {
+  pointer-events: none !important;
+}
+
+.hover-scale {
+  &:hover {
+    transition: all 0.1s linear;
+    transform: scale(1.015);
+  }
+}
+
+.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
+}
+
+
+.text-ellipsis {
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+

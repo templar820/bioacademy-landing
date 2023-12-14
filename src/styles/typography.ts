@@ -42,8 +42,8 @@ const typography: ThemeOptions['typography'] = {
     lineHeight: getInPx(20),
   },
   button: {
-    fontSize: getInPx(23),
-    lineHeight: getInPx(15),
+    fontSize: getInPx(15),
+    lineHeight: getInPx(16),
   },
   // лейблы к инпутам
   caption: {

@@ -10,6 +10,16 @@ const getColors = (props) => {
 const theme = createTheme({
   palette,
   typography,
+  components: {
+    MuiButton:{
+      styleOverrides: {
+        contained: {
+          padding: "10px 20px",
+          borderRadius: "16px"
+        }
+      }
+    }
+  }
 });
 
 export default theme;

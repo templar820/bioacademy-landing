@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss';
+import { Button, Typography } from '@mui/material';
 import logo from '../../assets/images/logo.png';
 
 function Header() {
@@ -27,10 +28,12 @@ function Header() {
       <a href="#">
         <img height={39} src={logo} alt="lgu casino" />
       </a>
-      <div className="d-flex flex-row gap-2">
-        {map.map(v => <span className={"btn"}>{v.key}</span>)}
+      <div className="d-flex flex-row gap-5">
+        {map.map(v => <Typography className={"cursor-pointer"} variant="button">{v.key}</Typography>)}
       </div>
-      <button className={"btn btn-primary"}><span>Бесплатное занятие</span></button>
+      <Button variant="contained" color="primary">
+        Бесплатное занятие
+      </Button>
     </header>
   );
 }
