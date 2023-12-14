@@ -11,6 +11,17 @@ const theme = createTheme({
   palette,
   typography,
   components: {
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          padding: "10px 20px",
+          backgroundColor: "white",
+          borderRadius: "10px",
+          border: "1px solid #000",
+          fontSize: 18
+        }
+      }
+    },
     MuiButton: {
       defaultProps: {
         variant: 'contained',

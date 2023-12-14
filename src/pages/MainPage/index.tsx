@@ -3,6 +3,7 @@ import Header from '$components/Header';
 import Banner from '$components/Banner';
 import NewSkills from '$components/NewSkills';
 import WebinarPlan from "$components/WebinarPlan";
+import Profile from "$components/Profile";
 
 function Index() {
   return (
@@ -11,6 +12,7 @@ function Index() {
       <Banner/>
       <NewSkills/>
       <WebinarPlan/>
+      <Profile/>
       {/* <GameCardsSection/> */}
       {/* <HotGamesSection/> */}
       {/* <CountrySelect/> */}
