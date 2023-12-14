@@ -12,6 +12,17 @@ const theme = createTheme({
   typography,
   components: {
     MuiButton:{
+      defaultProps: {
+        variant: "contained",
+      },
+      variants: [
+        {
+          props: { size: 'large' },
+          style: {
+            padding: "16px 30px",
+          },
+        }
+      ],
       styleOverrides: {
         contained: {
           padding: "10px 20px",

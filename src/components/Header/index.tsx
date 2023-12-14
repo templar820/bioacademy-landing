@@ -1,5 +1,5 @@
 import React from 'react';
-import './Header.scss';
+import './index.scss';
 import { Button, Typography } from '@mui/material';
 import logo from '../../assets/images/logo.png';
 
@@ -24,7 +24,7 @@ function Header() {
   ];
 
   return (
-    <header className="wrapper d-flex flex-row justify-content-between align-items-center">
+    <header className="container d-flex flex-row justify-content-between align-items-center">
       <a href="#">
         <img height={39} src={logo} alt="lgu casino" />
       </a>
