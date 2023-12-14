@@ -1,0 +1,10 @@
+.NewSkills{
+  .grid{
+    display: grid;
+    grid-gap: 56px;
+    grid-template-columns: 1fr 1fr;
+    @media only screen and (max-width: 1199px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

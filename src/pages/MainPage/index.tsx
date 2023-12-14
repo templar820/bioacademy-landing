@@ -1,21 +1,25 @@
 import React from 'react';
-import Header from "$components/Header";
-import Banner from "$components/Banner";
+import Header from '$components/Header';
+import Banner from '$components/Banner';
+import NewSkills from '$components/NewSkills';
 
-const Index = () => {
-
-
+function Index() {
   return (
     <>
-      <Header/>
-      <Banner/>
-      {/*<TopSection/>*/}
-      {/*<GameCardsSection/>*/}
-      {/*<HotGamesSection/>*/}
-      {/*<CountrySelect/>*/}
-      {/*<Footer/>*/}
+      <Header />
+      <Banner />
+      <NewSkills />
+      {/* <TopSection/> */}
+      {/* <GameCardsSection/> */}
+      {/* <HotGamesSection/> */}
+      {/* <CountrySelect/> */}
+      {/* <Footer/> */}
+      <div className="mt-5">
+        <Header inversion />
+      </div>
+      
     </>
-  )
-};
+  );
+}
 
 export default Index;

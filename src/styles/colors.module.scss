@@ -46,4 +46,5 @@ $common: (
   red3: map_get($common, 'red-3');
   red4: map_get($common, 'red-4');
   primary: map_get($common, 'black-1');
+  secondary: map_get($common, 'white-1');
 }

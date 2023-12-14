@@ -17,7 +17,7 @@ module.exports = function override(config) {
     $hooks: resolvePath('./src/hooks'),
     $helpers: resolvePath('./src/helpers'),
     $services: resolvePath('./src/services'),
-    $images: resolvePath('./src/assets/img'),
+    $images: resolvePath('./src/assets/images'),
     process: 'process/browser'
   })(config);
 

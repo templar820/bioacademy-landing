@@ -6,32 +6,6 @@ html, body {
   color: map_get($common, 'black-1');
 }
 
-.app {
-  width: 1440px;
-  margin: 0 auto;
-}
-
-.wrapper {
-  margin: 0 12px;
-  max-width: 1440px;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-}
-
-a {
-  cursor: pointer;
-}
-
-.position-relative {
-  position: relative;
-}
-
-.d-flex {
-  display: flex;
-}
 
 .element-animation {
   opacity: 0;

@@ -1,8 +1,15 @@
 header {
   height: 100px;
+  width: 100%;
 }
 
 .registerWrapper {
   margin-right: 25px;
   animation: 4s linear infinite reminder;
+}
+
+:root{
+  .inversion{
+    background-color: black;
+  }
 }
