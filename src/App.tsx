@@ -1,8 +1,7 @@
 import React from 'react';
 import { isMobile } from 'react-device-detect';
 import MainPage from './pages/MainPage/MainPage';
-import './styles/common.scss';
-import './styles/reset.scss';
+import './styles/index.scss';
 
 function App() {
   return (

@@ -1,0 +1,38 @@
+@import "colors.module";
+
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+$theme-colors: (
+  primary: $black,
+  secondary: $secondary,
+);
+
+@import '~bootstrap/scss/bootstrap';
+
+.br-16{
+  border-radius: 16px !important;
+}
+
+
+.btn-primary{
+  background-color: $black !important;
+}
+
+.w-fit{
+  width: fit-content;
+}
+
+.flex-1{
+  flex: 1 1
+}
+
+.ellipsis{
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.card {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 0;
+}

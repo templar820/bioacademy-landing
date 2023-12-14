@@ -1,28 +1,23 @@
 import React from 'react';
-import { BrowserView, isMobile } from 'react-device-detect';
 import './Header.scss';
 import logo from '../../assets/images/logo.png';
 
 function Header() {
   const map = [
     {
-      key: 'Занятия и стоимость',
+      key: 'Занятия',
       url: '#'
     },
     {
-      key: 'Методика и обучение',
+      key: 'План вебинара',
       url: '#'
     },
     {
-      key: 'Отзывы',
+      key: 'О преподавателе',
       url: '#'
     },
     {
-      key: 'Обо мне',
-      url: '#'
-    },
-    {
-      key: 'FAQ',
+      key: 'Образование',
       url: '#'
     },
   ];
@@ -32,7 +27,9 @@ function Header() {
       <a href="#">
         <img height={39} src={logo} alt="lgu casino" />
       </a>
-      {map.map(v => <span className={"btn"}>{v.key}</span>)}
+      <div className="d-flex flex-row gap-2">
+        {map.map(v => <span className={"btn"}>{v.key}</span>)}
+      </div>
       <button className={"btn btn-primary"}><span>Бесплатное занятие</span></button>
     </header>
   );
