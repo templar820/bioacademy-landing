@@ -33,7 +33,7 @@ function NewSkills(props) {
   };
 
   return (
-    <div className="NewSkills d-flex flex-row mt-5 w-100 container">
+    <div className="NewSkills d-flex flex-row w-100 container">
       <div className="w-50">
         <Typography>После вебинара</Typography>
         <img width={268} src={arrow}></img>

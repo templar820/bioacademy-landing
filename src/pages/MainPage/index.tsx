@@ -5,7 +5,7 @@ import NewSkills from '$components/NewSkills';
 
 function Index() {
   return (
-    <>
+    <div className={"land d-flex flex-column"}>
       <Header />
       <Banner />
       <NewSkills />
@@ -18,7 +18,7 @@ function Index() {
         <Header inversion />
       </div>
       
-    </>
+    </div>
   );
 }
 

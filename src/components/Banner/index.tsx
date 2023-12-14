@@ -10,7 +10,7 @@ function Banner(props) {
   };
   
   return (
-    <div className="container mt-5 banner d-flex justify-content-center flex-column gap-4 align-items-start">
+    <div className="container banner d-flex justify-content-center flex-column gap-4 align-items-start">
       <Typography color="white" variant="h1">{data.caption}</Typography>
       <Typography color="white" variant="body2">{data.description}</Typography>
       <Button color="primary" size={"large"}>{data.get}</Button>
