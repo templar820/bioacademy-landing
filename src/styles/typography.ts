@@ -32,6 +32,9 @@ const typography: ThemeOptions['typography'] = {
   //   fontSize: getInPx(30),
   //   lineHeight: getInPx(30),
   // },
+  subtitle1: {
+    fontSize: getInPx(28),
+  },
   subtitle2: {
     fontSize: getInPx(20),
   },
