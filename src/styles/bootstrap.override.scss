@@ -38,8 +38,8 @@ $theme-colors: (
 
 .card-contained {
   background-color: #F4F5F6;
-  min-height: 142px;
-  min-width: 327px;
+  max-height: 142px;
+  max-width: 327px;
   display: flex;
   box-shadow: none;
   border: none;

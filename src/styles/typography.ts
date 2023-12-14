@@ -10,7 +10,7 @@ const typography: ThemeOptions['typography'] = {
     fontWeight: 500,
     textTransform: 'none',
     whiteSpace: 'pre-line',
-
+    lineHeight: 'normal'
   },
   // Прям название сайта
   h1: {
@@ -19,11 +19,10 @@ const typography: ThemeOptions['typography'] = {
     lineHeight: getInPx(64),
     textTransform: 'uppercase'
   },
-  // h2: {
-  //   fontWeight: 700,
-  //   fontSize: getInPx(isMobile ? 36 : 60),
-  //   lineHeight: getInPx(isMobile ? 36 : 55),
-  // },
+  h2: {
+    fontWeight: 700,
+    fontSize: getInPx( 40),
+  },
   // h3: {
   //   fontWeight: 700,
   //   fontSize: getInPx(isMobile ? 20 : 45),
@@ -34,17 +33,18 @@ const typography: ThemeOptions['typography'] = {
   //   fontSize: getInPx(30),
   //   lineHeight: getInPx(30),
   // },
+  subtitle2: {
+    fontSize: getInPx(20),
+  },
   // Текст в карточках
   body1: {
     fontSize: getInPx(18),
-    lineHeight: 'normal',
     fontWeight: 300,
   },
-  // body2: {
-  //   fontWeight: 400,
-  //   fontSize: getInPx(isMobile ? 16 : 15),
-  //   lineHeight: getInPx(20),
-  // },
+  body2: {
+    fontWeight: 400,
+    fontSize: getInPx(14),
+  },
   button: {
     fontSize: getInPx(15),
     lineHeight: getInPx(16),

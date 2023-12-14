@@ -18,33 +18,17 @@ $common: (
   "violet-1": #3C01B7,
   "violet-2": #202021,
   "violet-3": #4A5CFF,
-  "blue-1": #B6D5FF,
   "blue-2": #7B99FF,
   "red-1": #DE0038,
   "red-2": #A5002A,
   "red-3": #DB0138,
   "red-4": #A55B5B,
+  "blue-1": #3686F7,
+
 );
 
 :export {
-  black1: map_get($common, 'black-1');
-  black2: map_get($common, 'black-2');
-  white1: map_get($common, 'white-1');
-  white2: map_get($common, 'white-2');
-  gray1: map_get($common, 'gray-1');
-  gray5: map_get($common, 'gray-5');
-  green1: map_get($common, 'green-1');
-  green2: map_get($common, 'green-2');
-  yellow1: map_get($common, 'yellow-1');
-  yellow2: map_get($common, 'yellow-2');
-  violet1: map_get($common, 'violet-1');
-  violet2: map_get($common, 'violet-2');
-  blue1: map_get($common, 'blue-1');
-  blue2: map_get($common, 'blue-2');
-  red1: map_get($common, 'red-1');
-  red2: map_get($common, 'red-2');
-  red3: map_get($common, 'red-3');
-  red4: map_get($common, 'red-4');
   primary: map_get($common, 'black-1');
   secondary: map_get($common, 'white-1');
+  blue1: map_get($common, 'blue-1');
 }
