@@ -2,6 +2,7 @@ import { createTheme } from '@mui/material';
 import Colors from './colors.module.scss';
 import typography from './typography';
 import palette from './palette';
+import UTILS from "../utils";
 
 const getColors = (props) => {
   return CSS.supports('color', props?.color) ? props?.color : Colors[props?.color] || {};
@@ -19,6 +20,25 @@ const theme = createTheme({
           borderRadius: "10px",
           border: "1px solid #000",
           fontSize: 18
+        }
+      }
+    },
+    MuiTextField:{
+      styleOverrides: {
+        root: {
+          '.MuiInputBase-root': {
+            borderRadius: UTILS.getInPx(16) + '!important',
+          },
+          fieldset: {
+            border: '1px solid ' + Colors.white + '!important',
+            borderRadius: UTILS.getInPx(16),
+            background: `${Colors.white} !important`,
+            paddingLeft: '16px !important',
+          },
+          input: {
+            zIndex: 10,
+            color: `${Colors.secondary} !important`,
+          },
         }
       }
     },
