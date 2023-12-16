@@ -1,0 +1,1 @@
+export type svgNamesType = "email" | "telegram" | "whatsapp";

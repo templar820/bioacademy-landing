@@ -1,0 +1,14 @@
+@import "$colors";
+
+
+.FeedBackForm{
+  .feedback-banner{
+    height: 440px;
+    background-color: map_get($common, 'blue-1');;
+    border-radius: 50px;
+    padding: 50px !important;
+    img {
+      transform: translate(0, -50%);
+    }
+  }
+}

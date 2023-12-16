@@ -4,6 +4,7 @@ import { ThemeOptions } from '@mui/material';
 const getInPx = (number: number) => `${number}px`;
 
 const typography: ThemeOptions['typography'] = {
+// @ts-ignore
   fontFamily: ['SF Pro Display'],
   allVariants: {
     fontStyle: 'normal',
@@ -21,11 +22,11 @@ const typography: ThemeOptions['typography'] = {
   },
   h2: {
     fontWeight: 700,
-    fontSize: getInPx( 40),
+    fontSize: getInPx(40),
   },
   h3: {
     fontWeight: 700,
-    fontSize: getInPx( 28),
+    fontSize: getInPx(28),
   },
   // h4: {
   //   fontWeight: 700,

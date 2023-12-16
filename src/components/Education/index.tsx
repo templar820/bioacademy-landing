@@ -48,8 +48,6 @@ function Education(props) {
           return getCard(v.caption, v.description, v.url, v.width)
         })}
       </div>
-
-    
     </div>
   );
 }

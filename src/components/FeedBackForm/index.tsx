@@ -1,0 +1,89 @@
+import React, {useState} from 'react';
+import './index.scss';
+import {
+  Checkbox, FormControlLabel, Link, TextField, Typography
+} from '@mui/material';
+import arrow2 from '$images/arrow2.png';
+import SvgIcons from "$common/SvgIcons";
+import {EmailOutlined} from "@mui/icons-material";
+function FeedBackForm(props) {
+  const caption = 'ЗАПИШИСЬ НА ПРОБНОЕ ЗАНЯТИЕ';
+  const free = 'Бесплатно';
+  const [name, setName] = useState('');
+  const [secondName, setSecondName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [checked, setChecked] = useState(false);
+  
+  return (
+    <div className="FeedBackForm">
+      <div className="container feedback-banner d-flex flex-row w-100 gap-5">
+        <div className="d-flex flex-column w-50">
+          <Typography color="black" variant="h2">
+            {caption.toUpperCase()}
+          </Typography>
+          <Typography color="white" variant="h2">
+            {free.toUpperCase()}
+          </Typography>
+          <img className="align-self-end" width={178} src={arrow2}/>
+          <div className="d-flex flex-row gap-4">
+            <SvgIcons width={44} height={44} name={"telegram"}/>
+            <SvgIcons width={44} height={44} name={"email"}/>
+            <SvgIcons width={44} height={44} name={"whatsapp"}/>
+          </div>
+        </div>
+        <form className="w-50 d-flex flex-column gap-2">
+          <TextField
+            required
+            label="Ваше имя"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <TextField
+            required
+            label="Ваша фамилия"
+            value={secondName}
+            onChange={(e) => setSecondName(e.target.value)}
+          />
+          <TextField
+            required
+            label="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <TextField
+            required
+            label="Номер телефона"
+            value={phone}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <FormControlLabel
+            labelPlacement="end"
+            control={(
+              <Checkbox
+                value={checked}
+                onChange={() => {
+                  setChecked(!checked);
+                }}
+                style={{
+                  color: 'white'
+                }}
+                required
+              />
+            )}
+            label={(
+              <div className="d-flex flex-row gap-2">
+                <Typography variant="body2" color="white" style={{textDecoration: 'underline'}}>
+                  Даю согласие на обработку персональных данных
+                </Typography>
+              
+              </div>
+            )}
+          />
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default FeedBackForm;
