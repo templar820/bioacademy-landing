@@ -1,1 +1,1 @@
-export type svgNamesType = "email" | "telegram" | "whatsapp";
+export type svgNamesType = "telegram" | "whatsapp";

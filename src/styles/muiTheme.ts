@@ -2,11 +2,7 @@ import { createTheme } from '@mui/material';
 import Colors from './colors.module.scss';
 import typography from './typography';
 import palette from './palette';
-import UTILS from "../utils";
-
-const getColors = (props) => {
-  return CSS.supports('color', props?.color) ? props?.color : Colors[props?.color] || {};
-};
+import UTILS from '../utils';
 
 const theme = createTheme({
   palette,
@@ -15,29 +11,36 @@ const theme = createTheme({
     MuiChip: {
       styleOverrides: {
         root: {
-          padding: "10px 20px",
-          backgroundColor: "white",
-          borderRadius: "10px",
-          border: "1px solid #000",
+          padding: '10px 20px',
+          backgroundColor: 'white',
+          borderRadius: '10px',
+          border: '1px solid #000',
           fontSize: 18
         }
       }
     },
-    MuiTextField:{
+    MuiTextField: {
       styleOverrides: {
         root: {
           '.MuiInputBase-root': {
             borderRadius: UTILS.getInPx(16) + '!important',
           },
           fieldset: {
-            border: '1px solid ' + Colors.white + '!important',
             borderRadius: UTILS.getInPx(16),
-            background: `${Colors.white} !important`,
+            background: 'white !important',
             paddingLeft: '16px !important',
+            borderWidth: "0 !important",
+            '&:hover': {
+              borderColor: "transparent"
+            }
           },
           input: {
             zIndex: 10,
-            color: `${Colors.secondary} !important`,
+            color: 'black !important',
+            '&::placeholder': {
+              color: 'black',
+              opacity: 1, /* Firefox */
+            }
           },
         }
       }
@@ -56,9 +59,9 @@ const theme = createTheme({
       ],
       styleOverrides: {
         root: {
-          "&:hover":{
+          '&:hover': {
             backgroundColor: Colors.blue1,
-            color: "white"
+            color: 'white'
           }
         },
         contained: {
