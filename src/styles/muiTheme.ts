@@ -19,6 +19,18 @@ const theme = createTheme({
         }
       }
     },
+    MuiFormControlLabel:{
+      styleOverrides: {
+        root: {
+          ".MuiStack-root":{
+            display: "flex !important",
+            flexDirection: "row !important",
+            color: "white",
+            gap: "8px",
+          },
+        },
+      },
+    },
     MuiTextField: {
       styleOverrides: {
         root: {

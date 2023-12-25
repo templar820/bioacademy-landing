@@ -5,7 +5,6 @@ import {
 } from '@mui/material';
 import arrow2 from '$images/arrow2.png';
 import SvgIcons from '$common/SvgIcons';
-import Colors from '$colors';
 
 function FeedBackForm(props) {
   const caption = 'ЗАПИШИСЬ НА ПРОБНОЕ ЗАНЯТИЕ';
