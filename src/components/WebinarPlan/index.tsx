@@ -26,7 +26,7 @@ function WebinarPlan(props) {
   
   
   return (
-    <div className={"container d-flex flex-column gap-4 WebinarPlan"}>
+    <div id={"webinar_plans"} className={"container d-flex flex-column gap-4 WebinarPlan"}>
       <Typography variant={'h2'} color={"black"}>План вебинара</Typography>
       <div className="d-flex flex-row gap-4">
         {data.map((v,item) => {

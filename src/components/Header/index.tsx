@@ -12,19 +12,19 @@ function Header(props: IHeader) {
   const map = [
     {
       key: 'Занятия',
-      url: '#'
+      url: '#lessons'
     },
     {
       key: 'План вебинара',
-      url: '#'
+      url: '#webinar_plans'
     },
     {
       key: 'О преподавателе',
-      url: '#'
+      url: '#about_me'
     },
     {
       key: 'Образование',
-      url: '#'
+      url: '#education'
     },
   ];
 
@@ -35,7 +35,7 @@ function Header(props: IHeader) {
           <img height={39} src={props.inversion ? logoInv : logo} alt="lgu casino" />
         </a>
         <div className="d-flex flex-row gap-5">
-          {map.map(v => <Typography className="cursor-pointer" color={props.inversion ? "white": "black"} variant="button">{v.key}</Typography>)}
+          {map.map(v => <Typography  className="cursor-pointer" color={props.inversion ? "white": "black"} variant="button"><a href={v.url}>{v.key}</a></Typography>)}
         </div>
         <Button variant="contained" color={props.inversion ? "secondary": "primary"}>
           Бесплатное занятие

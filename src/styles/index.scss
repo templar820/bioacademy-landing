@@ -45,6 +45,9 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .element-animation {
   /* Скроем элемент в начальном состоянии */
   opacity: 0;
@@ -67,4 +70,11 @@
 
 .land{
   gap: 64px
+}
+
+
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
 }

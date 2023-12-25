@@ -18,7 +18,7 @@ function Profile(props) {
   ]
   
   return (
-    <div className={"Profile p-5"}>
+    <div id={"about_me"} className={"Profile p-5"}>
       <div className="container d-flex flex-row">
         <div className="d-flex flex-column gap-2 flex-1">
           <Typography variant={"h2"}>Я - Колмыкова Инна</Typography>

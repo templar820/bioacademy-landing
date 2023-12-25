@@ -34,7 +34,7 @@ function NewSkills(props) {
   };
 
   return (
-    <div className="NewSkills d-flex flex-row w-100 container gap-4">
+    <div id={"lessons"} className="NewSkills d-flex flex-row w-100 container gap-4">
       <div className="w-50 d-flex flex-column justify-content-center gap-4">
         <Typography variant="h2" color={Colors.blue1}>После вебинара</Typography>
         <img className="align-self-end" width={268} src={arrow} />

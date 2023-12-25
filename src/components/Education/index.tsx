@@ -41,7 +41,7 @@ function Education(props) {
   
   
   return (
-    <div className={"container d-flex flex-column gap-4 Education"}>
+    <div id={"education"} className={"container d-flex flex-column gap-4 Education"}>
       <Typography variant={'h2'} color={"black"}>Образование</Typography>
       <div className="d-flex flex-row gap-4 justify-content-center mt-5">
         {data.map((v,item) => {
