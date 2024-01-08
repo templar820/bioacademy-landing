@@ -10,16 +10,12 @@ import FeedBackForm from "$components/FeedBackForm";
 function Index() {
   return (
     <div className="land d-flex flex-column">
-      <Header />
-      <Banner />
+      {/*<Banner />*/}
       <NewSkills />
-      <WebinarPlan />
-      <Profile />
-      <Education />
-      <FeedBackForm />
-      <div className="mt-5">
-        <Header inversion />
-      </div>
+      {/*/!*<WebinarPlan />*!/*/}
+      {/*/!*<Profile />*!/*/}
+      {/*/!*<Education />*!/*/}
+      {/*/!*<FeedBackForm />*!/*/}
 
     </div>
   );

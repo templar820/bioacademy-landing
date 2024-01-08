@@ -1,0 +1,22 @@
+// will be rewritten by generate_media_variables
+$media: (
+  "Mobile": [
+    0,
+    640
+  ],
+  "Tablet": [
+    640,
+    960
+  ],
+  "Laptop": [
+    960,
+    1280
+  ],
+  "Desktop": [
+    1280,
+    1920
+  ],
+  "DesktopMax": [
+    1920
+  ]
+);

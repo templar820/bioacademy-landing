@@ -1,0 +1,36 @@
+@import "variables";
+
+@mixin customMedia($min: 0, $max: 0) {
+  @if $max > 0 {
+    @if $min {
+      @media (min-width: #{$min}px) and (max-width: calc(#{$max}px - 1px)) {
+        @content;
+      }
+    } @else {
+      @media (max-width: calc(#{$max}px - 1px)) {
+        @content;
+      }
+    }
+  } @else if $min {
+    @media (min-width: #{$min}px) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin Media($args...) {
+  @each $mediaType in $args {
+    $sizes: map-get($media, $mediaType);
+    @if length($sizes) == 2 {
+      @include customMedia(nth($sizes, 1), nth($sizes, 2)) {
+        @content;
+      }
+    } @else if length($sizes) == 1 {
+      @include customMedia(nth($sizes, 1)) {
+        @content;
+      }
+    }
+  }
+}
