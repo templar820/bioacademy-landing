@@ -20,7 +20,7 @@ function Index() {
       <div className="mt-5">
         <Header inversion />
       </div>
-      
+
     </div>
   );
 }
