@@ -3,6 +3,7 @@ import { Typography } from '@mui/material';
 import './index.scss';
 import arrow from '$images/arrow.png';
 import Colors from '$colors';
+import {isMobile} from "react-device-detect";
 
 function NewSkills(props) {
   const data = [
@@ -34,10 +35,11 @@ function NewSkills(props) {
   };
 
   return (
-    <div id={"lessons"} className="NewSkills d-flex flex-row w-100 container gap-4">
+    <div id={"lessons"} className="NewSkills d-flex flex-row w-100 container gap-4 flex-wrap">
       <div className="w-50 d-flex flex-column justify-content-center gap-4">
         <Typography variant="h2" color={Colors.blue1}>После вебинара</Typography>
-        <img className="align-self-end" width={268} src={arrow} />
+        {isMobile && <Typography variant="h3">Вы научитесь</Typography>}
+        {!isMobile && <img className="align-self-end" width={268} src={arrow}/>}
       </div>
       <div className="grid">
         {data.map(v => getCard(v.caption, v.description))}
