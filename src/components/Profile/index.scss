@@ -1,9 +1,26 @@
+@import "$media";
+
 .Profile{
   background-color: #F4F5F6;
+  &__caption{
+    @include Media(Mobile){
+      text-align: center;
+    }
+  }
+  &__card{
+    @include Media(Mobile){
+      justify-content: center;
+    }
+  }
   .ChipLine{
     padding: 30px;
     border-radius: 20px;
     background: #FFF;
-    gap: 10px
+    gap: 10px;
+    flex-direction: row;
+    @include Media(Mobile){
+      flex-direction: column;
+      max-width: 100%;
+    }
   }
 }

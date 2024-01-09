@@ -13,7 +13,7 @@ function Index() {
       {/*<Banner />*/}
       <NewSkills />
       <WebinarPlan />
-      {/*/!*<Profile />*!/*/}
+      <Profile />
       {/*/!*<Education />*!/*/}
       {/*/!*<FeedBackForm />*!/*/}
 
