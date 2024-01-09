@@ -1,8 +1,22 @@
 @import "$colors";
-
+@import "$media";
 
 
 .WebinarPlan{
+
+  &__caption{
+
+    @include Media(Mobile){
+      text-align: center;
+    }
+  }
+
+  &__grid{
+    @include Media(Mobile){
+      justify-content: center;
+    }
+  }
+
   .count{
     position: absolute;
     right: 36px;

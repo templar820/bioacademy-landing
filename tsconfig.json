@@ -7,7 +7,7 @@
       "dom.iterable",
       "esnext"
     ],
-"typeRoots" : ["node_modules/@types", "src/"],
+    "typeRoots" : ["node_modules/@types", "src/"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -33,7 +33,8 @@
       "$api": ["./api/Api.service.ts"],
       "$services/*": ["services/*"],
       "$assets/*": ["assets/*"],
-      "$images/*": ["images/*"]
+      "$images/*": ["assets/images/*"],
+      "$media": ["assets/styles/media.scss"]
     },
     "jsx": "react-jsx"
   },

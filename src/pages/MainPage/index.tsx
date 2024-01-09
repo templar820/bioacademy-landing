@@ -12,7 +12,7 @@ function Index() {
     <div className="land d-flex flex-column">
       {/*<Banner />*/}
       <NewSkills />
-      {/*/!*<WebinarPlan />*!/*/}
+      <WebinarPlan />
       {/*/!*<Profile />*!/*/}
       {/*/!*<Education />*!/*/}
       {/*/!*<FeedBackForm />*!/*/}
