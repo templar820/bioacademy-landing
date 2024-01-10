@@ -14,8 +14,8 @@ function Index() {
       <NewSkills />
       <WebinarPlan />
       <Profile />
-      {/*/!*<Education />*!/*/}
-      {/*/!*<FeedBackForm />*!/*/}
+      <Education />
+      <FeedBackForm />
 
     </div>
   );
