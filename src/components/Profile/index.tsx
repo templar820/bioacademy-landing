@@ -18,7 +18,7 @@ function Profile(props) {
   ]
   
   return (
-    <div id={"about_me"} className={"Profile p-5"}>
+    <div id={"about_me"} className={"Profile py-5"}>
       <div className="container d-flex flex-row flex-wrap">
         <div className="d-flex flex-column gap-2 flex-1">
           <Typography className={"Profile__caption"} variant={"h2"}>Я - Колмыкова Инна</Typography>
@@ -31,14 +31,14 @@ function Profile(props) {
             </div>
           </div>
         </div>
-        {/*<div className="d-flex ChipLine h-100 flex-1 flex-wrap">*/}
-        {/*  {data.map(v => {*/}
-        {/*    return (*/}
-        {/*      <Chip label={v}/>*/}
-        {/*    )*/}
-        {/*  })}*/}
+        <div className="d-flex ChipLine h-100 flex-1 flex-wrap">
+          {data.map(v => {
+            return (
+              <Chip label={v}/>
+            )
+          })}
         
-        {/*</div>*/}
+        </div>
       </div>
     </div>
   );
