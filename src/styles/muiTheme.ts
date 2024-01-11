@@ -21,6 +21,9 @@ const theme = createTheme({
     },
     MuiFormControlLabel:{
       styleOverrides: {
+        asterisk: {
+          display: "none"
+        },
         root: {
           ".MuiStack-root":{
             display: "flex !important",
@@ -74,6 +77,12 @@ const theme = createTheme({
           '&:hover': {
             backgroundColor: Colors.blue1,
             color: 'white'
+          }
+        },
+        containedPrimary: {
+          '&:hover': {
+            backgroundColor: "white !important",
+            color: 'black'
           }
         },
         contained: {

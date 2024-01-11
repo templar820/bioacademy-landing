@@ -56,10 +56,11 @@ function FeedBackForm(props) {
             required
             placeholder="Номер телефона"
             value={phone}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setPhone(e.target.value)}
           />
           <FormControlLabel
             labelPlacement="end"
+            required
             control={(
               <Checkbox
                 value={checked}
@@ -77,11 +78,10 @@ function FeedBackForm(props) {
                 <Typography variant="body2" color="white" style={{textDecoration: 'underline'}}>
                   Даю согласие на обработку персональных данных
                 </Typography>
-              
               </div>
             )}
           />
-          <Button className={"p-3"} variant="contained" type={"submit"} color={"primary"}>
+          <Button size={"large"} variant="contained" type={"submit"} color={"primary"}>
             Бесплатное занятие
           </Button>
         </form>
