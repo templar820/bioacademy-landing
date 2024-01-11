@@ -1,5 +1,5 @@
 @import "$colors";
-
+@import "$media";
 
 
 .Education{
@@ -9,4 +9,9 @@
     padding: 20px 30px;
   }
 
+  &__caption{
+    @include Media(Mobile){
+      text-align: center;
+    }
+  }
 }

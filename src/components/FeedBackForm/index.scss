@@ -1,14 +1,39 @@
 @import "$colors";
+@import "$media";
 
 
 .FeedBackForm{
   .feedback-banner{
-    height: 440px;
+    min-height: 440px;
     background-color: map_get($common, 'blue-1');;
     border-radius: 50px;
-    padding: 50px !important;
+    padding: 50px;
+    flex-wrap: nowrap;
+    width: 50%;
+    @include Media(Mobile){
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 50px 16px;
+      border-radius: 0;
+      text-align: center;
+    }
     img {
       transform: translate(0, -50%);
+    }
+    form {
+      width: 50%;
+      gap: 16px;
+      @include Media(Mobile){
+        width: 100%;
+      }
+    }
+    .feedback-icons{
+      @include Media(Mobile){
+        flex-wrap: wrap;
+        width: 100%;
+        padding-top: 32px;
+        justify-content: center;
+      }
     }
   }
 }

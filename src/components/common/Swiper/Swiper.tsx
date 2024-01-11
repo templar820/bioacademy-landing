@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Swiper, SwiperSlide, SwiperSlideProps } from 'swiper/react';
+import {
+  Swiper, SwiperSlide, SwiperSlideProps, useSwiper
+} from 'swiper/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
 import './Swiper.scss';
-import { useSwiper } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
 
 interface SwiperProps extends SwiperSlideProps {
   list: any[];
@@ -21,7 +23,7 @@ interface SwiperProps extends SwiperSlideProps {
 
 function MySwiper(props: SwiperProps) {
   const swiper = useSwiper();
-  
+
   const slideTo = (index) => {
     if (swiper) {
       if (
@@ -43,7 +45,7 @@ function MySwiper(props: SwiperProps) {
 
   if (!props.list.length) return null;
 
-  const modules = props.withoutPagination ? [] : [Pagination];
+  const modules = props.withoutPagination ? [] : [Pagination, Navigation];
 
   if (props.autoplay) {
     modules.push(Autoplay);
@@ -55,6 +57,7 @@ function MySwiper(props: SwiperProps) {
       pagination={{
         dynamicBullets: !props.withoutPagination,
       }}
+      navigation
       className="swiper-flex"
       autoHeight={props.autoHeight ?? true}
       loop
