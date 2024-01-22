@@ -14,6 +14,7 @@
   &__grid{
     @include Media(Mobile){
       justify-content: center;
+      flex-wrap: wrap;
     }
   }
 

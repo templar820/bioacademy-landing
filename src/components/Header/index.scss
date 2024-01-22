@@ -1,16 +1,17 @@
 @import "$media";
 
-header {
-  height: 100px;
-  width: 100%;
-}
 
-.registerWrapper {
-  margin-right: 25px;
-  animation: 4s linear infinite reminder;
-}
+.Header{
+  header {
+    height: 100px;
+    width: 100%;
+  }
 
-:root{
+  .registerWrapper {
+    margin-right: 25px;
+    animation: 4s linear infinite reminder;
+  }
+
   .inversion{
     background-color: black;
     @include Media(Mobile){
@@ -23,6 +24,6 @@ header {
         align-items: center;
       }
     }
-
   }
+
 }

@@ -4,9 +4,11 @@ import { Button, Typography } from '@mui/material';
 import { isMobile } from 'react-device-detect';
 import logo from '../../assets/images/logo.png';
 import logoInv from '../../assets/images/logo-inversion.png';
+import logoMobile from '../../assets/images/logo-mobile.png';
 
 interface IHeader {
   inversion?: boolean
+  mobile: boolean;
 }
 
 function Header(props: IHeader) {
@@ -30,30 +32,32 @@ function Header(props: IHeader) {
   ];
 
   return (
-    <div className={`${props.inversion ? 'inversion' : ''}`}>
-      <header className="d-flex flex-row justify-content-between align-items-center container ">
-        <a href="#">
-          <img height={39} src={props.inversion ? logoInv : logo} alt="lgu casino" />
-        </a>
-        {!isMobile && (
-          <>
-            <div className="d-flex flex-row gap-5">
-              {map.map(v => (
-                <Typography
-                  className="cursor-pointer"
-                  color={props.inversion ? 'white' : 'black'}
-                  variant="button"
-                >
-                  <a href={v.url}>{v.key}</a>
-                </Typography>
-              ))}
-            </div>
-            <Button variant="contained" color={props.inversion ? 'secondary' : 'primary'}>
-              Бесплатное занятие
-            </Button>
-          </>
-        )}
-      </header>
+    <div className="Header">
+      <div className={`${props.mobile ? 'mobile' : props.inversion ? 'inversion' : ''}`}>
+        <header className="d-flex flex-row justify-content-between align-items-center container ">
+          <a href="#">
+            <img height={39} src={props.mobile ? logoMobile : props.inversion ? logoInv : logo} alt="lgu casino" />
+          </a>
+          {!isMobile && (
+            <>
+              <div className="d-flex flex-row gap-5">
+                {map.map(v => (
+                  <Typography
+                    className="cursor-pointer"
+                    color={props.inversion ? 'white' : 'black'}
+                    variant="button"
+                  >
+                    <a href={v.url}>{v.key}</a>
+                  </Typography>
+                ))}
+              </div>
+              <Button variant="contained" color={props.inversion ? 'secondary' : 'primary'}>
+                <a href="#invite">Бесплатное занятие</a>
+              </Button>
+            </>
+          )}
+        </header>
+      </div>
     </div>
 
   );

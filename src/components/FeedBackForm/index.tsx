@@ -18,7 +18,7 @@ function FeedBackForm(props) {
   const [checked, setChecked] = useState(false);
   
   return (
-    <div className="FeedBackForm">
+    <div id={"invite"} className="FeedBackForm">
       <div className="feedback-banner container d-flex flex-row w-100 gap-5">
         <div className="d-flex flex-column">
           <Typography color="black" variant="h2">
