@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from './App';
 import { ThemeProvider } from '@mui/material';
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
+import App from './App';
 import theme from './styles/muiTheme';
-import {QueryClient, QueryClientProvider, useQuery} from 'react-query';
-
+import { RootServiceProvider } from '$hooks/useRootService';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,10 +22,10 @@ const queryClient = new QueryClient({
 
 root.render(
   <ThemeProvider theme={theme}>
-    <QueryClientProvider client={queryClient}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-    </QueryClientProvider>
+    <RootServiceProvider>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
+    </RootServiceProvider>
   </ThemeProvider>
 );
