@@ -1,0 +1,13 @@
+@import "../components/PopupsContainer/PopupsContainer";
+
+.popups-container {
+  @import "common";
+  @import "../components/CenterTopSlimWrapper/CenterTopSlimWrapper";
+  @import "../components/CenterWrapper/CenterWrapper";
+  @import "../components/MobileBottomWrapper/MobileBottomWrapper";
+  @import "../components/PromoPopupWrapper/PromoPopupWrapper";
+  @import "../components/RightTopBottomCenterSlimWrapper/RightTopBottomCenterSlimWrapper";
+  @import "../components/ScreenWrapper/ScreenWrapper";
+  @import "../components/UICard/UICard";
+  @import "../components/UIWrapper/UIWrapper";
+}

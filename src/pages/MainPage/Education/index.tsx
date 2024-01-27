@@ -33,7 +33,7 @@ function Education(props) {
 
   const getCard = (caption, description, url, width) => {
     return (
-      <div className="card-contained d-flex flex-column gap-3">
+      <div key={caption} className="card-contained d-flex flex-column gap-3">
         <Typography variant="subtitle1" color={Colors.blue1}>{caption}</Typography>
         <Typography variant="body2">{description}</Typography>
         <img className="align-self-center" width={width || 194} src={url} />

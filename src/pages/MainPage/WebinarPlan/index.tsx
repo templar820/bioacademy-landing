@@ -12,12 +12,12 @@ function WebinarPlan(props) {
       time: "15 минут"
     },
     {
-      caption: "Структура экзамена",
+      caption: "Структура экзамена1",
       description: "При оценке дизайна и композиции читаемый текст мешает сосредоточиться. Стандартное заполнение шаблона.",
       time: "15 минут"
     },
     {
-      caption: "Структура экзамена",
+      caption: "Структура экзамена2",
       description: "При оценке дизайна и композиции читаемый текст мешает сосредоточиться. Стандартное заполнение шаблона.",
       time: "15 минут"
     },
@@ -31,7 +31,7 @@ function WebinarPlan(props) {
       <div className="WebinarPlan__grid d-flex flex-row gap-4">
         {data.map((v,item) => {
           return (
-            <div className={"card-outlined d-flex flex-column gap-3 position-relative"}>
+            <div key={v.caption} className={"card-outlined d-flex flex-column gap-3 position-relative"}>
               <Typography variant={"h3"} color={Colors.blue1}>{v.caption}</Typography>
               <Typography variant={"body1"}>{v.description}</Typography>
               <Typography variant={"body1"} color={Colors.blue1}>{v.time}</Typography>

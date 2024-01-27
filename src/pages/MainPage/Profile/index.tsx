@@ -34,7 +34,7 @@ function Profile(props) {
         <div className="d-flex ChipLine h-100 flex-1 flex-wrap">
           {data.map(v => {
             return (
-              <Chip label={v}/>
+              <Chip key={v} label={v}/>
             )
           })}
         

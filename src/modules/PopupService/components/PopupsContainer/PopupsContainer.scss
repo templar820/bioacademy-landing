@@ -1,0 +1,10 @@
+.popups-container {
+  position: absolute;
+  z-index: 200;
+
+  &--storybook {
+    .popup-wrapper-center {
+      max-width: 100%;
+    }
+  }
+}

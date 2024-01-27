@@ -1,20 +1,18 @@
-import BaseNotification from '$components/notifications/BaseNotification';
-import AppStore from '../stores/App.store';
-import NotificationManager from '../helpers/NotificationManager';
-
 export default class SheetService {
-  static scriptUrl = 'https://script.google.com/macros/s/AKfycbw3fdDTeAsoJ_tdmHAGIP1j1SnsbmxLQcgWvftFmyqTGtKD-UD7cd7_gaf8wbGTeCxJ/exec';
+  static scriptUrl = 'https://script.google.com/macros/s/AKfycbwikNJCFXAtwghttuU2WqJ7vfRlqF5ugXPd5-qD5Gb2XXbyopMVBh---CZ2_iDyPPPK/exec';
 
-  initService() {
+  
+  
+  initService(){
+  
   }
 
   async createRow(name, surname, email, phone) {
     const formDatab = new FormData();
-    formDatab.set("Name", name);
-    formDatab.set("Surname", surname);
-    formDatab.set("Email", email);
-    formDatab.set("Phone", phone);
-    console.log(formDatab);
+    formDatab.set('Name', name);
+    formDatab.set('Surname', surname);
+    formDatab.set('Email', email);
+    formDatab.set('Phone', phone);
     return fetch(
       SheetService.scriptUrl,
       {
@@ -22,11 +20,9 @@ export default class SheetService {
         body: formDatab
       }
     )
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
-      .catch((error) => {
+      .then(res => res.text())
+      .then(data => Promise.resolve(true))
+      .catch(error => {
         console.log(error);
       });
   }

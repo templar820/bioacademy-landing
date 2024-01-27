@@ -33,6 +33,7 @@
       "$api": ["./api/Api.service.ts"],
       "$services/*": ["services/*"],
       "$assets/*": ["assets/*"],
+      "$popup-service/*": ["modules/PopupService/*"],
       "$images/*": ["assets/images/*"],
       "$media": ["assets/styles/media.scss"]
     },

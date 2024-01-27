@@ -8,14 +8,18 @@ import { isMobile } from 'react-device-detect';
 import arrow2 from '$images/arrow2.png';
 import SvgIcons from '$common/SvgIcons';
 import { useRootService } from '$hooks/useRootService';
+import { PopupsService } from '$popup-service/model/PopupsService';
+import CenterWrapper from '$popup-service/components/CenterWrapper';
+import { PopupsContainerModel } from '$popup-service/model/Common';
+import ETypeWrapper = PopupsContainerModel.ETypeWrapper;
 
 function FeedBackForm(props) {
   const caption = 'ЗАПИШИСЬ НА ПРОБНОЕ ЗАНЯТИЕ';
   const free = 'Бесплатно';
-  const [name, setName] = useState('');
-  const [secondName, setSecondName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [name, setName] = useState('Иван');
+  const [secondName, setSecondName] = useState('Кузнецов');
+  const [email, setEmail] = useState('ttemplar820@gmail.com');
+  const [phone, setPhone] = useState('+79652557006');
   const [checked, setChecked] = useState(false);
 
   const service = useRootService().SheetService;
@@ -38,10 +42,25 @@ function FeedBackForm(props) {
         </div>
         <form
           className="d-flex flex-column"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
             e.stopPropagation();
-            service.createRow(name, secondName, email, phone);
+            const response = await service.createRow(name, secondName, email, phone);
+            if (response){
+              const propsData= {
+                title: "Поздравляем!",
+                body: "Ваша заявка создана успешно. Ожидайте новостей на электронную почту"
+              };
+              PopupsService.open({
+                type: ETypeWrapper.CENTER,
+                component: (
+                  <CenterWrapper
+                    title={propsData.title}
+                    body={propsData.body}
+                  />
+                ),
+              });
+            }
           }}
         >
           <TextField

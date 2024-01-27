@@ -1,9 +1,9 @@
 {
   "env": {
     "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "node": true
+    "es6": true
+    // "commonjs": true,
+    // "node": true,
   },
   "globals": {
     "APPMODE": "readonly"
@@ -11,7 +11,13 @@
   "extends": [
     "airbnb",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "eslint-config-prettier"
+  ],
+  "plugins": [
+    "react-hooks",
+    "@typescript-eslint",
+    "simple-import-sort"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -22,20 +28,17 @@
     }
   },
   "rules": {
-    "template-curly-spacing" : "off",
-    "arrow-body-style": "off",
-
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [
-          ".js",
-          ".ts",
-          ".jsx",
-          ".tsx"
-        ]
-      }
+    "camelcase": "warn",
+    "template-curly-spacing": "off",
+    "no-continue": "off",
+    // !
+    "eqeqeq": "warn",
+    // !
+    "arrow-body-style": [
+      "error",
+      "as-needed"
     ],
+    "no-unused-vars": "off",
     "comma-dangle": [
       "error",
       "only-multiline"
@@ -46,16 +49,6 @@
         "code": 120
       }
     ],
-    "semi": [
-      "error",
-      "always"
-    ],
-    "no-unused-vars": [
-      "error",
-      {
-        "args": "none"
-      }
-    ],
     "keyword-spacing": [
       "error",
       {
@@ -63,67 +56,172 @@
         "before": true
       }
     ],
-    "jsx-one-expression-per-line": 0,
-    "react-hooks/rules-of-hooks": 0,
     "no-underscore-dangle": 0,
-    "arrow-parens": "off",
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
     "arrow-spacing": "error",
     "prefer-template": 0,
     "no-restricted-syntax": "warn",
-    "consistent-return": "warn",
     "no-plusplus": 0,
-    "react/no-array-index-key": 0,
     "no-console": 0,
-    "linebreak-style": 0,
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
     "no-param-reassign": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "no-mixed-spaces-and-tabs": 0,
-    "no-tabs": ["error", { "allowIndentationTabs": true }],
     "indent": [
-      "warn",
+      "error",
       2,
+      // !
       {
-        "SwitchCase": 1,
-        "MemberExpression": 1,
         "ignoredNodes": [
-          "FunctionExpression > .params[decorators.length > 0]",
-          "TemplateLiteral",
-          "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
-          "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
-        ]
+          "TemplateLiteral"
+        ],
+        "SwitchCase": 1
       }
     ],
-    "camelcase": 0,
-    "import/no-unresolved": 0,
-    // TODO delete
+    "prefer-destructuring": [
+      "warn",
+      {
+        "object": true,
+        "array": false
+      }
+    ],
+    "no-empty": [
+      "error",
+      {
+        "allowEmptyCatch": true
+      }
+    ],
+    "no-prototype-builtins": "off",
+    "no-var-requires": "off",
+    "no-bitwise": "off",
+    "class-methods-use-this": "off",
+    "no-unused-expressions": "off",
+    "no-await-in-loop": "off",
+    // ?
+    "consistent-return": "off",
+    "no-empty-function": "off",
+    "array-callback-return": "warn",
+    "semi": "error",
+    "no-shadow": "error",
+    "default-case": "off",
+    "no-eval": "error",
+    "no-cond-assign": [
+      "error",
+      "always"
+    ],
+    "no-useless-constructor": "error",
+    "no-useless-escape": 0,
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        // ?
+        "variables": true,
+        "allowNamedExports": false
+      }
+    ],
+    "func-names": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "jsx-a11y/click-events-have-key-events": 0,
+    "react/jsx-one-expression-per-line": [
+      "error",
+      {
+        "allow": "single-child"
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "react/sort-comp": "warn",
+    "react/jsx-no-bind": "warn",
+    "react/jsx-key": "error",
+    "react/no-array-index-key": "off",
+    "react/button-has-type": 0,
     "react/prop-types": 0,
     "react/jsx-props-no-spreading": 0,
     "react/destructuring-assignment": 0,
-    "no-useless-escape": 0,
-    "react-hooks/exhaustive-deps": 0,
-    "react/require-default-props": 0,
-    "react/react-in-jsx-scope": 0,
-    "jsx-a11y/alt-text": 0,
-    "react/no-this-in-sfc": 0,
-    "@typescript-eslint/no-use-before-define": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "off",
+    // ?
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          // ?
+          ".ts",
+          // ?
+          ".jsx",
+          ".tsx"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-empty-function": "error",
+    "@typescript-eslint/semi": "error",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/no-useless-constructor": "error",
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": false,
+        // ?
+        "variables": true,
+        "allowNamedExports": false
+      }
+    ],
+    "import/no-unresolved": 0,
     "@typescript-eslint/ban-ts-ignore": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/interface-name-prefix": 0,
-    "@typescript-eslint/no-empty-interface": 0,
     "@typescript-eslint/no-non-null-assertion": 0,
-    "import/extensions": 0
+    "@typescript-eslint/import-order": 0,
+    "@typescript-eslint/no-shadow": 1,
+    "@typescript-eslint/no-namespace": 0,
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index",
+          "object",
+          "type"
+        ]
+      }
+    ],
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "warn"
   },
-  "plugins": [
-    "react-hooks",
-    "@typescript-eslint"
-  ],
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx", ".png"]
-      },
-      "typescript": {}
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          ".png"
+        ]
+      }
     }
   }
 }

@@ -27,7 +27,7 @@ function NewSkills(props) {
   
   const getCard = (caption, description) => {
     return (
-      <div className="card-contained d-flex flex-column gap-2">
+      <div key={caption} className="card-contained d-flex flex-column gap-2">
         <Typography variant="subtitle2">{caption}</Typography>
         <Typography variant="body2">{description}</Typography>
       </div>

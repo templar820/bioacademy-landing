@@ -2,13 +2,13 @@ import React from 'react';
 import './index.scss';
 import { Button, Typography } from '@mui/material';
 import { isMobile } from 'react-device-detect';
-import logo from '../../assets/images/logo.png';
-import logoInv from '../../assets/images/logo-inversion.png';
-import logoMobile from '../../assets/images/logo-mobile.png';
+import logo from '$assets/images/logo.png';
+import logoInv from '$assets/images/logo-inversion.png';
+import logoMobile from '$assets/images/logo-mobile.png';
 
 interface IHeader {
   inversion?: boolean
-  mobile: boolean;
+  mobile?: boolean;
 }
 
 function Header(props: IHeader) {
@@ -43,6 +43,7 @@ function Header(props: IHeader) {
               <div className="d-flex flex-row gap-5">
                 {map.map(v => (
                   <Typography
+                    key={v.url}
                     className="cursor-pointer"
                     color={props.inversion ? 'white' : 'black'}
                     variant="button"

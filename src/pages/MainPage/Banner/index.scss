@@ -2,7 +2,7 @@
 @import "$media";
 
 .banner {
-  background-image: url("../../assets/images/banner-background.png");
+  background-image: url("$assets/images/banner-background.png");
   background-position:center;
   background-repeat: no-repeat;
   background-size: 110%;
@@ -16,7 +16,7 @@
   @include Media(Mobile){
     width: 100%;
     gap: 32px;
-    background-image: url("../../assets/images/banner.mobile.png");
+    background-image: url("$assets/images/banner.mobile.png");
     align-items: center;
     text-align: center;
     background-size: cover;
