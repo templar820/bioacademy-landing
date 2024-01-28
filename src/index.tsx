@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider, useQuery } from 'react-query';
 import App from './App';
 import theme from './styles/muiTheme';
 import { RootServiceProvider } from '$hooks/useRootService';
+import { RootStoreProvider } from '$hooks/useRootStore';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,10 +23,12 @@ const queryClient = new QueryClient({
 
 root.render(
   <ThemeProvider theme={theme}>
-    <RootServiceProvider>
-      <QueryClientProvider client={queryClient}>
-        <App />
-      </QueryClientProvider>
-    </RootServiceProvider>
+    <RootStoreProvider>
+      <RootServiceProvider>
+        <QueryClientProvider client={queryClient}>
+          <App />
+        </QueryClientProvider>
+      </RootServiceProvider>
+    </RootStoreProvider>
   </ThemeProvider>
 );
