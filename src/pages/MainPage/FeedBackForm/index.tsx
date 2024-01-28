@@ -16,10 +16,10 @@ import ETypeWrapper = PopupsContainerModel.ETypeWrapper;
 function FeedBackForm(props) {
   const caption = 'ЗАПИШИСЬ НА ПРОБНОЕ ЗАНЯТИЕ';
   const free = 'Бесплатно';
-  const [name, setName] = useState('Иван');
-  const [secondName, setSecondName] = useState('Кузнецов');
-  const [email, setEmail] = useState('ttemplar820@gmail.com');
-  const [phone, setPhone] = useState('+79652557006');
+  const [name, setName] = useState('');
+  const [secondName, setSecondName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
   const [checked, setChecked] = useState(false);
 
   const service = useRootService().SheetService;
