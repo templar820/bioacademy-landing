@@ -8,16 +8,17 @@ export default class SheetService {
   }
 
   async createRow(name, surname, email, phone) {
-    const formDatab = new FormData();
-    formDatab.set('Name', name);
-    formDatab.set('Surname', surname);
-    formDatab.set('Email', email);
-    formDatab.set('Phone', phone);
+    const formData = new FormData();
+    formData.set('Name', name);
+    formData.set('Surname', surname);
+    formData.set('Email', email);
+    formData.set('Phone', phone);
+    console.log(formData);
     return fetch(
       SheetService.scriptUrl,
       {
         method: 'POST',
-        body: formDatab
+        body: formData
       }
     )
       .then(res => res.text())
