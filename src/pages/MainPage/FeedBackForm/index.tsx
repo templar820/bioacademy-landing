@@ -48,7 +48,7 @@ function FeedBackForm(props) {
     }
   };
   
-  const debounceCreateRow = useCallback(UTILS.debounce(createRow, 1000, false), []);
+  const debounceCreateRow = UTILS.debounce(createRow, 1000, false);
   
 
   return (
