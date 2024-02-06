@@ -7,9 +7,10 @@ import App from './App';
 import theme from './styles/muiTheme';
 import { RootServiceProvider } from '$hooks/useRootService';
 import { RootStoreProvider } from '$hooks/useRootStore';
+import yandexMetrika from '$assets/metriks/yandex.metrika';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 
 const queryClient = new QueryClient({
@@ -21,14 +22,39 @@ const queryClient = new QueryClient({
   },
 });
 
+console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV === 'production') {
+  const metrikaContainer = document.getElementById('metrika');
+  metrikaContainer.innerHTML = yandexMetrika;
+  (function (m, e, t, r, i, k, a) {
+    m[i] = m[i] || function () {
+      (m[i].a = m[i].a || []).push(arguments);
+    };
+    m[i].l = 1 * new Date();
+    for (var j = 0; j < document.scripts.length; j++) {
+      if (document.scripts[j].src === r) {
+        return;
+      }
+    }
+    k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a);
+  })
+  (window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+  ym(96385120, 'init', {
+    clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    webvisor: true,
+  });
+}
+
 root.render(
   <ThemeProvider theme={theme}>
     <RootStoreProvider>
       <RootServiceProvider>
         <QueryClientProvider client={queryClient}>
-          <App />
+          <App/>
         </QueryClientProvider>
       </RootServiceProvider>
     </RootStoreProvider>
-  </ThemeProvider>
+  </ThemeProvider>,
 );

@@ -8,18 +8,18 @@ function WebinarPlan(props) {
   const data = [
     {
       caption: "Структура экзамена",
-      description: "При оценке дизайна и композиции читаемый текст мешает сосредоточиться. Стандартное заполнение шаблона.",
+      description: "Узнай, какие задания дают максимум баллов за минимум времени",
       time: "15 минут"
     },
     {
-      caption: "Структура экзамена1",
-      description: "При оценке дизайна и композиции читаемый текст мешает сосредоточиться. Стандартное заполнение шаблона.",
-      time: "15 минут"
+      caption: "Разбор заданий",
+      description: "Получи уникальную формулу решений и как избежать типовые ошибки",
+      time: "55 минут"
     },
     {
-      caption: "Структура экзамена2",
-      description: "При оценке дизайна и композиции читаемый текст мешает сосредоточиться. Стандартное заполнение шаблона.",
-      time: "15 минут"
+      caption: "Мышление проверяющего",
+      description: "Расскажем о том, как думают эксперты и как получить большее баллов в неочевидных местах",
+      time: "20 минут"
     },
   ]
   
@@ -34,7 +34,7 @@ function WebinarPlan(props) {
             <div key={v.caption} className={"card-outlined d-flex flex-column gap-3 position-relative"}>
               <Typography variant={"h3"} color={Colors.blue1}>{v.caption}</Typography>
               <Typography variant={"body1"}>{v.description}</Typography>
-              <Typography variant={"body1"} color={Colors.blue1}>{v.time}</Typography>
+              <Typography className={"time"} variant={"body1"} color={Colors.blue1}>{v.time}</Typography>
               <Typography variant={"h2"} className={"count"}>0{item+1}</Typography>
             </div>
           )

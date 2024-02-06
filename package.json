@@ -12,6 +12,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "buffer": "^6.0.3",
+    "cross-env": "^7.0.3",
     "google-auth-library": "^9.5.0",
     "google-spreadsheet": "^4.1.1",
     "html-react-parser": "^5.0.7",
@@ -34,7 +35,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "cross-env NODE_ENV=production react-app-rewired start",
     "build": "react-app-rewired build",
     "svgNameTypes:create": "node scripts/generateSvgIconsTypes.js",
     "ts:css": "tcm -s -c -p src/**/*.module.scss",
