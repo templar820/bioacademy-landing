@@ -52,7 +52,11 @@ function Header(props: IHeader) {
                   </Typography>
                 ))}
               </div>
-              <Button variant="contained" color={props.inversion ? 'secondary' : 'primary'}>
+              <Button
+                onClick={() => {
+                  ym(96385120,'reachGoal','click_trial_lesson')
+                }}
+                variant="contained" color={props.inversion ? 'secondary' : 'primary'}>
                 <a href="#invite">Бесплатное занятие</a>
               </Button>
             </>

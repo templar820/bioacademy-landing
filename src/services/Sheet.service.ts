@@ -1,5 +1,5 @@
 export default class SheetService {
-  static scriptUrl = 'https://script.google.com/macros/s/AKfycbwikNJCFXAtwghttuU2WqJ7vfRlqF5ugXPd5-qD5Gb2XXbyopMVBh---CZ2_iDyPPPK/exec';
+  static scriptUrl = 'https://script.google.com/macros/s/AKfycbyUOnb0kt1aNbk5lmCU6P97w79kkbriechjvj5xFXKg3GkOpA-gl_ZnfYSrHMb_GtTx/exec';
 
   
   
@@ -13,6 +13,8 @@ export default class SheetService {
     formData.set('Surname', surname);
     formData.set('Email', email);
     formData.set('Phone', phone);
+    let currentDate = new Date().toJSON().slice(0, 10);
+    formData.set('TS', currentDate);
     console.log(formData);
     return fetch(
       SheetService.scriptUrl,

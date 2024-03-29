@@ -16,7 +16,7 @@ function Banner(props) {
       {isMobile && <Header inversion mobile />}
       <Typography color="white" variant="h1">{data.caption}</Typography>
       <Typography color="white" variant="body2">{data.description}</Typography>
-      <Button color="primary" size="large"><a href="#invite">{data.get}</a></Button>
+      <Button onClick={() => {ym(96385120,'reachGoal','click_trial_lesson')}} color="primary" size="large"><a href="#invite">{data.get}</a></Button>
     </div>
   );
 }

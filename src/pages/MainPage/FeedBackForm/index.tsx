@@ -75,6 +75,7 @@ function FeedBackForm(props) {
             e.stopPropagation();
             store.startLoader();
             debounceCreateRow();
+            ym(96385120,'reachGoal','application_sent');
           }}
         >
           <TextField
