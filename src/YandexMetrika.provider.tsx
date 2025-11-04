@@ -25,10 +25,10 @@ function YandexMetrikaProvider(props) {
       clickmap:true,
       trackLinks:true,
       accurateTrackBounce:true,
-      userParams: {
-        botname: "myBot",
-        UserID: "@templar820",
-      },
+    });
+    window.ym(96385120, "userParams", {
+      botname: "myBot",
+      UserID: "@templar820",
     });
     
   }, []);
