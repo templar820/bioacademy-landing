@@ -9,6 +9,7 @@ import Education from './Education';
 import FeedBackForm from './FeedBackForm';
 
 function Index() {
+  console.log(true);
   return (
     <div className="land d-flex flex-column">
       {!isMobile && <Header />}
