@@ -27,8 +27,8 @@ function YandexMetrikaProvider(props) {
       accurateTrackBounce:true,
     });
     window.ym(96385120, "userParams", {
-      botname: "myBot",
       UserID: "@templar820",
+      botname: "@bot",
     });
     
   }, []);
